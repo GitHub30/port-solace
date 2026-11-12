@@ -4,10 +4,16 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
 <meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Port Solace" />
+<meta name="theme-color" content="#05070c" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="apple-touch-icon" href="icon-192.png" />
 <title>Port Solace — WebGPU Open World</title>
 <style>
   html, body { margin: 0; height: 100%; background: #000; overflow: hidden; font-family: system-ui, "Segoe UI", sans-serif; touch-action: none; overscroll-behavior: none; -webkit-user-select: none; user-select: none; }
-  canvas#gfx { width: 100vw; height: 100vh; display: block; }
+  canvas#gfx { width: 100vw; height: 100vh; height: 100dvh; display: block; }
   #hud { position: fixed; left: 10px; top: 10px; color: #e8f0ff; font: 12px/1.45 ui-monospace, Consolas, monospace; text-shadow: 0 1px 2px #000; pointer-events: none; white-space: pre; }
   #help { position: fixed; right: 10px; bottom: 10px; color: #dfe8f5; font: 12px/1.5 system-ui; text-shadow: 0 1px 2px #000; pointer-events: none; white-space: pre; opacity: .85; text-align: right; }
   #speed { position: fixed; right: 24px; top: 18px; color: #fff; font: 600 28px/1 system-ui; text-shadow: 0 2px 6px #000; pointer-events: none; }
@@ -17,7 +23,7 @@
   #fatal h1 { margin: 0; font-size: 28px; color: #ff6b6b; }
   #crosshair { position: fixed; left: 50%; top: 50%; width: 4px; height: 4px; margin: -2px; border-radius: 50%; background: rgba(255,255,255,.6); pointer-events: none; }
 </style>
-  <script type="module" crossorigin src="./assets/index-B1JtACcQ.js"></script>
+  <script type="module" crossorigin src="./assets/index-CVvYHcg5.js"></script>
 </head>
 <body>
 <canvas id="gfx"></canvas>
