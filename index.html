@@ -22,8 +22,11 @@
   #fatal { position: fixed; inset: 0; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 12px; background: #120608; color: #ffd9d9; font: 16px system-ui; text-align: center; padding: 24px; z-index: 10; }
   #fatal h1 { margin: 0; font-size: 28px; color: #ff6b6b; }
   #crosshair { position: fixed; left: 50%; top: 50%; width: 4px; height: 4px; margin: -2px; border-radius: 50%; background: rgba(255,255,255,.6); pointer-events: none; }
+  #crosshair.target { background: #ff3020; box-shadow: 0 0 0 6px rgba(255,48,32,.35); }
+  #crosshair.hit::before, #crosshair.hit::after { content: ''; position: absolute; left: -8px; top: 1px; width: 20px; height: 2px; background: #fff; transform: rotate(45deg); }
+  #crosshair.hit::after { transform: rotate(-45deg); }
 </style>
-  <script type="module" crossorigin src="./assets/index-CVvYHcg5.js"></script>
+  <script type="module" crossorigin src="./assets/index-B2ImnFHy.js"></script>
 </head>
 <body>
 <canvas id="gfx"></canvas>
