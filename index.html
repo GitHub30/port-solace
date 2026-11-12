@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<meta name="mobile-web-app-capable" content="yes" />
+<title>Port Solace — WebGPU Open World</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; font-family: system-ui, "Segoe UI", sans-serif; touch-action: none; overscroll-behavior: none; -webkit-user-select: none; user-select: none; }
+  canvas#gfx { width: 100vw; height: 100vh; display: block; }
+  #hud { position: fixed; left: 10px; top: 10px; color: #e8f0ff; font: 12px/1.45 ui-monospace, Consolas, monospace; text-shadow: 0 1px 2px #000; pointer-events: none; white-space: pre; }
+  #help { position: fixed; right: 10px; bottom: 10px; color: #dfe8f5; font: 12px/1.5 system-ui; text-shadow: 0 1px 2px #000; pointer-events: none; white-space: pre; opacity: .85; text-align: right; }
+  #speed { position: fixed; right: 24px; top: 18px; color: #fff; font: 600 28px/1 system-ui; text-shadow: 0 2px 6px #000; pointer-events: none; }
+  #prompt { position: fixed; left: 50%; bottom: 18%; transform: translateX(-50%); color: #fff; font: 600 16px system-ui; text-shadow: 0 1px 4px #000; pointer-events: none; }
+  #loading { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; color: #cfe0ff; font: 18px system-ui; background: #05070c; }
+  #fatal { position: fixed; inset: 0; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 12px; background: #120608; color: #ffd9d9; font: 16px system-ui; text-align: center; padding: 24px; z-index: 10; }
+  #fatal h1 { margin: 0; font-size: 28px; color: #ff6b6b; }
+  #crosshair { position: fixed; left: 50%; top: 50%; width: 4px; height: 4px; margin: -2px; border-radius: 50%; background: rgba(255,255,255,.6); pointer-events: none; }
+</style>
+  <script type="module" crossorigin src="./assets/index-B1JtACcQ.js"></script>
+</head>
+<body>
+<canvas id="gfx"></canvas>
+<div id="hud"></div>
+<div id="speed"></div>
+<div id="prompt"></div>
+<div id="crosshair"></div>
+<div id="help"></div>
+<div id="loading">Loading…</div>
+<div id="fatal"><h1>WebGPU を利用できません</h1><div class="msg"></div><div>WebGPU 対応の Google Chrome (113 以降) で開いてください。</div></div>
+</body>
+</html>
