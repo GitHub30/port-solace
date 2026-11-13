@@ -25,17 +25,24 @@
   #crosshair.target { background: #ff3020; box-shadow: 0 0 0 6px rgba(255,48,32,.35); }
   #crosshair.hit::before, #crosshair.hit::after { content: ''; position: absolute; left: -8px; top: 1px; width: 20px; height: 2px; background: #fff; transform: rotate(45deg); }
   #crosshair.hit::after { transform: rotate(-45deg); }
+  /* 比較用 (?clean=1): HUD と操作説明を隠す */
+  body.clean #hud, body.clean #help, body.clean #speed, body.clean #prompt, body.clean #crosshair, body.clean #touch { display: none !important; }
+  #credit { display: none; position: fixed; left: 8px; bottom: 6px; z-index: 5; font: 10px/1.3 system-ui, sans-serif; color: rgba(255,255,255,.75); text-shadow: 0 1px 2px rgba(0,0,0,.8); pointer-events: none; }
+  body.map-namba #credit { display: block; }
+  body.clean #credit { display: none; }
 </style>
-  <script type="module" crossorigin src="./assets/index-BrJC-BVb.js"></script>
+  <script type="module" crossorigin src="./assets/index-BcbBE1fD.js"></script>
 </head>
 <body>
 <canvas id="gfx"></canvas>
 <div id="hud"></div>
+<!-- 難波のマップで使っている外部データの出典 (ODbL / PLATEAU の利用条件) -->
+<div id="credit">地図データ © OpenStreetMap contributors (ODbL) ／ 建物: 3D 都市モデル (Project PLATEAU) 大阪市 2025 年度 (国土交通省) を加工して作成</div>
 <div id="speed"></div>
 <div id="prompt"></div>
 <div id="crosshair"></div>
 <div id="help"></div>
 <div id="loading">Loading…</div>
-<div id="fatal"><h1>WebGPU を利用できません</h1><div class="msg"></div><div>WebGPU 対応の Google Chrome (113 以降) で開いてください。</div></div>
+<div id="fatal"><h1>WebGPU を利用できません</h1><div class="msg"></div><div>WebGPU 対応の Google Chrome (113 以降) で開いてください。</div></div>
 </body>
 </html>
